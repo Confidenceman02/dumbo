@@ -20,11 +20,12 @@ M.PATTERNS = {
 M.DEFAULT_PAYLOAD = {
 	model = "Qwen/Qwen2.5-Coder-7B-Instruct-AWQ",
 	max_tokens = 64,
-	temperature = 0.0,
+	temperature = 0.2,
 	stop = {
 		"<|fim_middle|>",
 		"<|fim_suffix|>",
 		"<|endoftext|>",
+		"\n\n",
 	},
 }
 
