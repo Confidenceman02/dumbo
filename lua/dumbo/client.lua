@@ -47,7 +47,7 @@ function M.build_curl_cmd(endpoint, body, timeout_ms, api_key)
 		timeout_sec,
 		"--data-binary",
 		body,
-		endpoint,
+		endpoint .. "/completions",
 	}
 
 	if api_key and api_key ~= "" then
