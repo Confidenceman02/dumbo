@@ -30,8 +30,6 @@ Fast, minimal, and non-blocking Fill-In-the-Middle (FIM) code completion for Neo
 ### Using [lazy.nvim](https://github.com/folke/lazy.nvim)
 
 ```lua
-local vllm_host = os.getenv("DUMBO_VLLM_HOST")
-
 return {
   "Confidenceman02/dumbo",
   event = { "BufReadPre", "BufNewFile" },
@@ -42,7 +40,7 @@ return {
     dumbo.setup({
       debounce_ms = 200,
       client = {
-        endpoint = "http://" .. vllm_host .. "/v1/completions",
+        endpoint = "http://10.1.1.2/v1",
         model = "Qwen/Qwen2.5-Coder-7B-Instruct-AWQ",
       },
       payload = {
