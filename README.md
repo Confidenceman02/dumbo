@@ -46,6 +46,7 @@ return {
       payload = {
         max_tokens = 48,
         temperature = 0.0,
+        model = "Qwen/Qwen2.5-Coder-3B"
       },
     })
 
